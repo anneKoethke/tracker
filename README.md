@@ -1,16 +1,16 @@
 # tracker
-JSON data based responsive tracker (mobile, desktop)
+JSON data based responsive tracker (mobile, desktop). Have an overview of several topics (categories) and further information via interaction (tooltip)
+| display of a single category | description |
+|:----------------------------:|:-----------:|
+| ![alt text](https://github.com/anneKoethke/tracker/blob/master/res/img/showcase_pngs/tracker_5_aufbau.png "topic == category") |  |
+
 
 ## Want people to click on informational stuff on your website? with tooltips?
 
 Let's look at some screenshots...
 
-### The desktop version
-Up to three columns with the categories, changes based on width to two or one. States (not yet started, started, fulfilled, terminated) als SVGs for preattentive perception. Highlighting teh title (+ pointer cursor) to empahsis the possibility to click ont a title for further info. 
-![alt text](https://github.com/anneKoethke/tracker/blob/master/res/img/showcase_pngs/tracker_1_desktop.png "Desktop version")
-
-### Desktop with tooltip
-The tooltip repeats the title and state (img -> text) and adds further info (two paragraphs and an optional link with link text). 
+### The desktop version (tooltip active)
+Up to three columns with the categories, changes based on width to two or one. States (not yet started, started, fulfilled, terminated) als SVGs for preattentive perception. Highlighting teh title (+ pointer cursor) to empahsis the possibility to click ont a title for further info. The tooltip repeats the title and state (img -> text) and adds further info (two paragraphs and an optional link with link text). 
 ![alt text](https://github.com/anneKoethke/tracker/blob/master/res/img/showcase_pngs/tracker_2_desktop_tooltip.png "Desktop version with Tooltip")
 
 ### The mobile version 
