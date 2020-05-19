@@ -1,0 +1,320 @@
+/*
+  MZ Farbschema:
+  Dunkelblau  #1d394d
+  Hellblau    #82b0c0
+  Helleres Blau #d9e7ec
+*/
+
+@font-face {
+  font-family: 'National2WebRegular';
+  src: url('../font/national2/National2Web-Regular.eot'); /* IE9 Compat Modes */
+  src: url('../font/national2/National2Web-Bold.woff2') format('woff2'); /* Super Modern Browsers */
+  src: url('../font/national2/National2Web-Regular.woff') format('woff'); /* Pretty Modern Browsers */
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  font-family: 'National2WebRegular', serif;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none; /* Safari 3.1+ */
+  -khtml-user-select: none;
+  -moz-user-select: none; /* Firefox 2+ */
+  -ms-user-select: none; /* IE 10+ */
+  user-select: none;
+}
+
+#tracker-haeder {
+  max-width: 780px;
+}
+
+#title {
+  position: absolute;
+  text-align: center;
+  padding: .1em;
+  padding-left: .3em;
+  bottom: 1.5em !important;
+  right: 1.5em;
+  color: white;
+  text-shadow: .07em .07em black;
+  font-size: 1.8em !important;
+}
+
+#tracker-legend {
+  display: grid;
+  grid-template-columns: 3fr 2fr 2fr 2fr;
+  background-color: #d9e7ec;
+  padding: .5em;
+  margin-bottom: 1em;
+}
+
+#th-state {
+  background-color: #d9e7ec;
+  padding: .8em .8em 0em .8em;
+  margin: 0;
+}
+
+.legend-item {
+  display: grid;
+  grid-template-columns: 1fr 6fr;
+}
+
+.legend-item p {
+  margin: 0;
+  padding: .5em .8em 0em .8em;
+}
+
+.big-img {
+  width: 2em;
+  height: 2em;
+}
+
+#help {
+  display: grid;
+  grid-template-columns: 1fr 9fr;
+  background-color: #d9e7ec;
+  border: 1px solid #1d394d;
+  color: #1d394d;
+  padding: .5em 1em; 
+  margin-bottom: 1em;
+}
+
+#help-img{
+  position: relative;
+  background-color: #E6E6E6;
+  border: 2px solid #fff;
+  padding: .5em .5em .5em .8em;
+  margin: .1em;
+  border-radius: 100%;
+  bottom: 2.5em;
+}
+
+#help-txt {
+  font-size: 1.5em;
+  margin: 0;
+  padding: .5em;
+}
+
+#tracker-content {
+  display: grid;
+  grid-gap: 1em;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.content-item {
+  background-color: #d9e7ec;
+  padding-bottom: .5em; 
+}
+
+.content-item h2 {
+  font-size: 24px !important;
+  padding: .5em;
+  margin-top: 0;
+  margin-bottom: .5em;
+  color: white;
+  background-color: #1d394d;
+  min-height: 55px;
+}
+
+.content-item h3 {
+  padding: 0 .5em;
+  line-height: 1.3em;
+  margin: .2em;
+}
+
+.content-item div {
+  background-color: #d9e7ec;
+}
+
+.content-list-item {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding-left: .5em;
+  cursor: pointer;
+}
+.content-list-item-inner {
+  display: grid;
+  grid-template-columns: 1fr 7fr;
+  padding-left: .5em;
+  cursor: pointer;
+}
+.content-list-item-inner img {
+  padding: .3em .25em .25em .25em;
+}
+.content-list-item-inner p {
+  margin: 0;
+  padding: .25em 1.25em .25em .25em;
+}
+
+.content-list-item-inner:hover {
+  background-color: #5584A2;
+}
+
+.small-img {
+  width: 1.3em;
+  height: 1.3em;
+}
+
+/* TOOLTIP*/
+
+.tooltip {
+  position: absolute;
+  margin: .2em;
+  background-color: #1d394d !important;
+  color: white; 
+  max-width: 400px;
+  border-radius: 1em;
+  padding: 1em 1em;
+  transform: translateY(5%);
+}
+
+#content10 .content-list-item-inner > .tooltip {
+  transform: translateY(-100%);
+}
+
+#content11 .content-list-item-inner > .tooltip {
+  transform: translateY(-100%);
+}
+
+.hide {
+  visibility: hidden;
+}
+
+.show {
+  visibility: visible;
+}
+
+#first-row {
+  background-color: inherit;
+  display: grid;
+  grid-template-columns: 9fr 1fr;
+}
+.tt-delete {
+  border-radius: 100%;
+}
+
+.tt-delete:hover {
+  background-color: #82b0c0;
+}
+
+.tooltip > a {
+  color: #82b0c0;
+}
+
+.tt-promise, .tt-dev {
+  line-height: 1.5em;
+}
+
+/* 3 fr in fullscreen -> 3rd and 6th elem -> reposition tooltip */
+.content-item:nth-child(3) .tooltip, .content-item:nth-child(6) .tooltip, .content-item:nth-child(9) .tooltip {
+  right: .1em;
+}
+
+/* HIER HOVER FUNKTION ENTFERNT!!! */
+/*.content-list-item:hover>.tooltip {
+  display: inline;
+}*/
+
+/*  MEDIA QUERIES */
+
+@media only screen and (max-width: 830px) {
+  #title {
+    font-size: 1.7em !important;
+    bottom: 2em !important;
+  }
+}
+
+@media only screen and (max-width: 710px) {
+  #title {
+    font-size: 1.5em !important;
+    bottom: 2em !important;
+  }
+}
+
+@media only screen and (max-width: 670px) {
+  #tracker-legend {
+    grid-template-columns: 3fr 2fr 1fr 1fr;
+  } 
+}
+
+@media only screen and (max-width: 640px) {
+  #title {
+    font-size: 1.4em !important;
+    padding-left: .5em;
+    bottom: 2em !important;
+  }
+  #foto-nachweis {
+    bottom: .25em;
+  }
+  #tracker-content {
+    grid-template-columns: 1fr 1fr;
+  }
+  /* unsets the property defined for the 3rd and 6th elem in full screen */
+  .content-item:nth-child(3) .tooltip, .content-item:nth-child(6) .tooltip, .content-item:nth-child(9) .tooltip {
+    right: unset !important;
+  }
+  /* resets the property for every even elem */
+  .content-item:nth-child(even) .tooltip {
+    right: .1em !important;
+  }
+}
+
+@media only screen and (max-width: 620px) { 
+  #tracker-legend {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: .5em;
+  }
+}
+
+@media only screen and (max-width: 470px) { 
+  #tracker-legend {
+    grid-template-columns: 2fr 1fr;
+    grid-gap: .5em;
+  }
+  #help-img {
+    width: 1.5em;
+    height: auto;
+  }
+  #help-txt {
+    font-size: 1em;
+  }
+}
+
+@media only screen and (max-width: 440px) { 
+  .content-item h2 {
+    min-height: 30px;
+  }
+  .big-img {
+    width: 1.3em;
+    height: 1.3em;
+  }
+  .legend-item {
+    padding: .1em;
+    grid-template-columns: 1fr 7fr;
+  }
+  .legend-item p {
+    padding: 0;
+  }
+  #tracker-legend {
+    grid-template-columns: 1fr;
+  }
+  #tracker-content {
+    grid-template-columns: 1fr;
+  }
+  .content-list-item {
+    grid-template-columns: 1fr;
+  }
+  .content-list-item-inner {
+    grid-template-columns: 1fr 8fr;
+  }
+  /* tooltips of first category are diplayed to the bottom on mobile == 1 column grid */
+}
+
+@media only screen and (max-width: 400px) {
+  #title {
+    font-size: 1.3em !important;
+    bottom: 2em !important;
+  }
+}
+
+/* toDos: (1) height in Dialog? */
