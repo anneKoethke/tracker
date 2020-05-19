@@ -1,7 +1,7 @@
 # tracker
 JSON data based responsive tracker (mobile, desktop). Have an overview of several topics (categories) and further information via interaction (tooltip)
 | display of a single category | description |
-|:----------------------------:|:-----------:|
+|:----------------------------:|:-----------|
 | ![alt text](https://github.com/anneKoethke/tracker/blob/master/res/img/showcase_pngs/tracker_5_aufbau.png "topic == category") | underscore is used to fuse the data (template with JSON) to the category (via class). Subcategories (h3) can be added to every single item if needed. There are four states (not yet started, started, fulfilled, terminated) represented by easy readable SVGs for preattentive perception. |
 
 ## The desktop version (tooltip active)
