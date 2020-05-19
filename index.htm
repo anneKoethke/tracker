@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="de"> 
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" type="text/css" media="screen" href="res/css/style.css" />
+  <script src="res/js/hyphenate.js" type="text/javascript"></script>
+  <title>Stadttracker Regensburg</title>
+  <!-- IOAM -->
+  <script type="text/javascript" src="https://script.ioam.de/iam.js"></script>
+  
+  <!-- Google Tag Manager / mittelbayerische.de -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+  j.async=true;j.src=
+  '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-PXCMZD');</script>
+  <!-- End Google Tag Manager / mittelbayerische.de --> 
+
+</head>
+<body>
+  <div id="tracker-container">
+
+    <div id="tracker-header">
+      
+      <h3 id="th-state">Status der Projekte</h3>
+      <div id="tracker-legend">
+        <div class="legend-item" id="legend-1">
+          <img src="res/img/not.svg" class="big-img" alt="nicht">
+          <p>noch nicht begonnen</p>
+        </div>
+        <div class="legend-item" id="legend-2">
+          <img src="res/img/half.svg" class="big-img" alt="halb">
+          <p>in Arbeit</p>
+        </div>
+        <div class="legend-item" id="legend-3">
+          <img src="res/img/full.svg" class="big-img" alt="erledigt">
+          <p>erledigt</p>
+        </div>
+        <div class="legend-item" id="legend-4">
+          <img src="res/img/x.svg" class="big-img" alt="verfehlt">
+          <p>verfehlt</p>
+        </div>
+      </div>
+
+      <div id="help">
+        <img id="help-img" src="res/img/arrow.svg" alt="Pfeil">
+        <p id="help-txt">Klicken Sie mit der Maus auf einen der Punkte und erfahren Sie mehr.</p>
+      </div>
+
+    </div>
+
+    <div id="tracker-content">
+      
+      <div class="content-item" id="content1">
+        <h2>Innere Sicherheit</h2>
+        <div class="content-list" id="InnereSicherheit"></div>
+      </div>
+
+      <div class="content-item" id="content2">
+        <h2>Justiz und Verfassung</h2>
+        <div class="content-list" id="JustizVerfassung"></div>
+      </div>
+
+      <div class="content-item" id="content3">
+        <h2>Arbeit und Soziales</h2>
+        <div class="content-list" id="ArbeitSoziales"></div>
+      </div>
+
+      <div class="content-item" id="content4">
+        <h2>Infrastruktur</h2>
+        <div class="content-list" id="Infrastruktur"></div>
+      </div>
+
+      <div class="content-item" id="content5">
+        <h2>Asyl</h2>
+        <div class="content-list" id="Asyl"></div>
+      </div>
+
+      <div class="content-item" id="content6">
+        <h2>Umwelt und Landwirtschaft</h2>
+        <div class="content-list" id="UmweltLandwirtschaft"></div>
+      </div>
+
+      <div class="content-item" id="content7">
+        <h2>Finanzen</h2>
+        <div class="content-list" id="Finanzen"></div>
+      </div>
+  
+      <div class="content-item" id="content8">
+        <h2>Gesundheit und Pflege</h2>
+        <div class="content-list" id="GesundheitPflege"></div>
+      </div>
+
+      <div class="content-item" id="content9">
+        <h2>Wohnungs&shy;politik</h2>
+        <div class="content-list" id="Wohnungspolitik"></div>
+      </div>
+
+      <div class="content-item" id="content10">
+        <h2>Wirtschaft und Energie</h2>
+        <div class="content-list" id="WirtschaftEnergie"></div>
+      </div>
+
+      <div class="content-item" id="content11">
+        <h2>Bildung und Wissenschaft</h2>
+        <div class="content-list" id="BildungWissenschaft"></div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- template for .content-list-item in each .content-list -->
+  <script type="text/template" id="myTemp">
+    <div class="content-list-item hyphenate" id="<%= id %>">
+      <h3><%= h3 %></h3>
+      <div class="content-list-item-inner">
+          <img src="<%= imagePath %>" class="small-img" alt="<%= stand %>">
+          <p><%= titel %></p>
+          <div class="tooltip hide">        
+            <div id="first-row">
+              <p class="tt-state">&mdash; <%= stand %> &mdash;</p>
+              <img class="small-img tt-delete" id="<%= id %>" src="res/img/delete.svg" alt="hide">
+            </div>
+            <h3 class="tt-title"><%= titel %></h3>
+            <p class="tt-promise"><%= versprechen %></p>
+            <p class="tt-dev"><%= entwicklung %></p>
+            <a href="<%= link %>" target="_blank" class="tt-link"><%= linkinfo %></a>
+          </div>
+      </div>
+    </div>
+  </script>
+  
+
+  <!-- the data -->
+  <script type="text/template" id="data">
+  [{"id": 1, "kategorie": "InnereSicherheit", "h3":"Zwischenüberschrift", "stand": "noch nicht begonnen", "imagePath": "res/img/not.svg", "titel": "Titel", "versprechen": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, atque error molestias voluptatibus nam dolorem culpa reprehenderit deserunt iste asperiores repellendus porro! Sequi quae voluptatibus nobis porro pariatur adipisci nam?", "entwicklung": "Lorem ipsum dolor sit amet consectetur adipisicing elit. ", "link": "https://www.mittelbayerische.de", "linkinfo":"Lesen Sie hier weiter"},
+  {"id": 2, "kategorie": "InnereSicherheit", "h3":"", "stand": "erledigt", "imagePath": "res/img/full.svg", "titel": "Titel", "versprechen": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, atque error molestias voluptatibus nam dolorem culpa reprehenderit deserunt iste asperiores repellendus porro! Sequi quae voluptatibus nobis porro pariatur adipisci nam?", "entwicklung": "Lorem ipsum dolor sit amet consectetur adipisicing elit. ", "link": "https://www.mittelbayerische.de", "linkinfo":"Lesen Sie hier weiter"},
+  {"id": 3, "kategorie": "InnereSicherheit", "h3":"Zwischenüberschrift", "stand": "verfehlt", "imagePath": "res/img/x.svg", "titel": "Titel", "versprechen": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, atque error molestias voluptatibus nam dolorem culpa reprehenderit deserunt iste asperiores repellendus porro! Sequi quae voluptatibus nobis porro pariatur adipisci nam?", "entwicklung": "Lorem ipsum dolor sit amet consectetur adipisicing elit. ", "link": "https://www.mittelbayerische.de", "linkinfo":"Lesen Sie hier weiter"}, 
+  {"id": 4, "kategorie": "JustizVerfassung", "h3":"", "stand": "in Arbeit", "imagePath": "res/img/half.svg", "titel": "Titel", "versprechen": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, atque error molestias voluptatibus nam dolorem culpa reprehenderit deserunt iste asperiores repellendus porro! Sequi quae voluptatibus nobis porro pariatur adipisci nam?", "entwicklung": "Lorem ipsum dolor sit amet consectetur adipisicing elit. ", "link": "https://www.mittelbayerische.de", "linkinfo":"Lesen Sie hier weiter"},
+  {"id": 5, "kategorie": "JustizVerfassung", "h3":"Zwischenüberschrift", "stand": "erledigt", "imagePath": "res/img/full.svg", "titel": "Titel", "versprechen": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, atque error molestias voluptatibus nam dolorem culpa reprehenderit deserunt iste asperiores repellendus porro! Sequi quae voluptatibus nobis porro pariatur adipisci nam?", "entwicklung": "Lorem ipsum dolor sit amet consectetur adipisicing elit. ", "link": "https://www.mittelbayerische.de", "linkinfo":"Lesen Sie hier weiter"},
+  {"id": 6, "kategorie": "JustizVerfassung", "h3":"", "stand": "erledigt", "imagePath": "res/img/full.svg", "titel": "Titel", "versprechen": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, atque error molestias voluptatibus nam dolorem culpa reprehenderit deserunt iste asperiores repellendus porro! Sequi quae voluptatibus nobis porro pariatur adipisci nam?", "entwicklung": "Lorem ipsum dolor sit amet consectetur adipisicing elit. ", "link": "https://www.mittelbayerische.de", "linkinfo":"Lesen Sie hier weiter"},
+  {"id": 7, "kategorie": "ArbeitSoziales", "h3":"", "stand": "noch nicht begonnen", "imagePath": "res/img/not.svg", "titel": "Titel", "versprechen": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, atque error molestias voluptatibus nam dolorem culpa reprehenderit deserunt iste asperiores repellendus porro! Sequi quae voluptatibus nobis porro pariatur adipisci nam?", "entwicklung": "Lorem ipsum dolor sit amet consectetur adipisicing elit. ", "link": "https://www.mittelbayerische.de", "linkinfo":"Lesen Sie hier weiter"},
+  {"id": 8, "kategorie": "ArbeitSoziales", "h3":"", "stand": "in Arbeit", "imagePath": "res/img/half.svg", "titel": "Titel", "versprechen": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, atque error molestias voluptatibus nam dolorem culpa reprehenderit deserunt iste asperiores repellendus porro! Sequi quae voluptatibus nobis porro pariatur adipisci nam?", "entwicklung": "Lorem ipsum dolor sit amet consectetur adipisicing elit. ", "link": "https://www.mittelbayerische.de", "linkinfo":"Lesen Sie hier weiter"}, 
+  {"id": 9, "kategorie": "ArbeitSoziales", "h3":"", "stand": "in Arbeit", "imagePath": "res/img/half.svg", "titel": "Titel", "versprechen": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, atque error molestias voluptatibus nam dolorem culpa reprehenderit deserunt iste asperiores repellendus porro! Sequi quae voluptatibus nobis porro pariatur adipisci nam?", "entwicklung": "Lorem ipsum dolor sit amet consectetur adipisicing elit. ", "link": "https://www.mittelbayerische.de", "linkinfo":"Lesen Sie hier weiter"}, 
+  {"id": 10, "kategorie": "Infrastruktur", "h3":"", "stand": "in Arbeit", "imagePath": "res/img/half.svg", "titel": "Titel", "versprechen": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, atque error molestias voluptatibus nam dolorem culpa reprehenderit deserunt iste asperiores repellendus porro! Sequi quae voluptatibus nobis porro pariatur adipisci nam?", "entwicklung": "Lorem ipsum dolor sit amet consectetur adipisicing elit. ", "link": "https://www.mittelbayerische.de", "linkinfo":"Lesen Sie hier weiter"}, 
+  {"id": 11, "kategorie": "Asyl", "h3":"", "stand": "in Arbeit", "imagePath": "res/img/half.svg", "titel": "Titel", "versprechen": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, atque error molestias voluptatibus nam dolorem culpa reprehenderit deserunt iste asperiores repellendus porro! Sequi quae voluptatibus nobis porro pariatur adipisci nam?", "entwicklung": "Lorem ipsum dolor sit amet consectetur adipisicing elit. ", "link": "https://www.mittelbayerische.de", "linkinfo":"Lesen Sie hier weiter"}, 
+  {"id": 12, "kategorie": "UmweltLandwirtschaft", "h3":"", "stand": "in Arbeit", "imagePath": "res/img/half.svg", "titel": "Titel", "versprechen": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, atque error molestias voluptatibus nam dolorem culpa reprehenderit deserunt iste asperiores repellendus porro! Sequi quae voluptatibus nobis porro pariatur adipisci nam?", "entwicklung": "Lorem ipsum dolor sit amet consectetur adipisicing elit. ", "link": "https://www.mittelbayerische.de", "linkinfo":"Lesen Sie hier weiter"}, 
+  {"id": 13, "kategorie": "Finanzen", "h3":"", "stand": "in Arbeit", "imagePath": "res/img/half.svg", "titel": "Titel", "versprechen": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, atque error molestias voluptatibus nam dolorem culpa reprehenderit deserunt iste asperiores repellendus porro! Sequi quae voluptatibus nobis porro pariatur adipisci nam?", "entwicklung": "Lorem ipsum dolor sit amet consectetur adipisicing elit. ", "link": "https://www.mittelbayerische.de", "linkinfo":"Lesen Sie hier weiter"}, 
+  {"id": 14, "kategorie": "GesundheitPflege", "h3":"", "stand": "in Arbeit", "imagePath": "res/img/half.svg", "titel": "Titel", "versprechen": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, atque error molestias voluptatibus nam dolorem culpa reprehenderit deserunt iste asperiores repellendus porro! Sequi quae voluptatibus nobis porro pariatur adipisci nam?", "entwicklung": "Lorem ipsum dolor sit amet consectetur adipisicing elit. ", "link": "https://www.mittelbayerische.de", "linkinfo":"Lesen Sie hier weiter"}, 
+  {"id": 15, "kategorie": "Wohnungspolitik", "h3":"", "stand": "in Arbeit", "imagePath": "res/img/half.svg", "titel": "Titel", "versprechen": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, atque error molestias voluptatibus nam dolorem culpa reprehenderit deserunt iste asperiores repellendus porro! Sequi quae voluptatibus nobis porro pariatur adipisci nam?", "entwicklung": "Lorem ipsum dolor sit amet consectetur adipisicing elit. ", "link": "https://www.mittelbayerische.de", "linkinfo":"Lesen Sie hier weiter"}, 
+  {"id": 16, "kategorie": "WirtschaftEnergie", "h3":"", "stand": "in Arbeit", "imagePath": "res/img/half.svg", "titel": "Titel", "versprechen": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, atque error molestias voluptatibus nam dolorem culpa reprehenderit deserunt iste asperiores repellendus porro! Sequi quae voluptatibus nobis porro pariatur adipisci nam?", "entwicklung": "Lorem ipsum dolor sit amet consectetur adipisicing elit. ", "link": "https://www.mittelbayerische.de", "linkinfo":"Lesen Sie hier weiter"}, 
+  {"id": 17, "kategorie": "BildungWissenschaft", "h3":"", "stand": "in Arbeit", "imagePath": "res/img/half.svg", "titel": "Titel", "versprechen": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, atque error molestias voluptatibus nam dolorem culpa reprehenderit deserunt iste asperiores repellendus porro! Sequi quae voluptatibus nobis porro pariatur adipisci nam?", "entwicklung": "Lorem ipsum dolor sit amet consectetur adipisicing elit. ", "link": "https://www.mittelbayerische.de", "linkinfo":"Lesen Sie hier weiter"}]
+  </script>
+
+  <!-- GOOGLE start -->
+  <noscript>
+    <iframe src="//www.googletagmanager.com/ns.html?id=GTM-PXCMZD" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>
+  <!-- GOOGLE end -->
+
+
+  <!-- SZM VERSION="2.0" --> 
+  <script type="text/javascript">
+    if (navigator.userAgent.match(/mobile/i)) {
+      var iam_data = { 
+        "st":"mobmibay", // site/domain 
+        "cp":"MZ-MEW-Nachrichten-Diagramme", // code 
+        "sv":"mo", // Es wird eine Befragungseinladung ausgeliefert    
+        "co":"kommentar" // comment
+      } 
+      iom.c(iam_data);
+    } else {
+      var iam_data = { 
+        "st":"donaude", // site/domain 
+        "cp":"MZ-Nachrichten-Diagramme", // code 
+        "sv":"in", // Es wird eine Befragungseinladung ausgeliefert    
+        "co":"kommentar" // comment 
+        };
+      iom.c(iam_data);
+    }
+    
+  </script>
+  <!--/SZM -->
+
+  <script src="res/js/underscore-min.js"></script>
+  <script src="res/js/ShowTooltips.js"></script>
+  <script src="res/js/Tracker.js"></script>
+  <script>Tracker.processData();</script>
+</body>
+</html>
