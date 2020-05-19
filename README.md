@@ -15,9 +15,11 @@ the tooltip repeats the title and state (img -> text) and adds further info (two
 
 ### The mobile version 
 always one column.
-![alt text](https://github.com/anneKoethke/tracker/blob/master/res/img/showcase_pngs/tracker_3_mobile.png "Mobile version")
 
-### Mobile with tooltip
+| (no interaction) | with tooltip |
+|:-------------:|:-------------:|
+| ![alt text](https://github.com/anneKoethke/tracker/blob/master/res/img/showcase_pngs/tracker_3_mobile.png "Mobile version") | ![alt text](https://github.com/anneKoethke/tracker/blob/master/res/img/showcase_pngs/tracker_4_mobile_tooltip.png "Mobile version with Tooltip") |
+
 Mobile tooltips start at the bottom of the Title they belong to. Towards the bottom of the html (last category), the tooltip display turns upwards (so nothing is cut).
-![alt text](https://github.com/anneKoethke/tracker/blob/master/res/img/showcase_pngs/tracker_4_mobile_tooltip.png "Mobile version with Tooltip")
+
 
