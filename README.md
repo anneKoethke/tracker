@@ -6,12 +6,12 @@ JSON data based responsive tracker (mobile, desktop)
 Let's look at some screenshots...
 
 ### The desktop version
- 
-| ![alt text](https://github.com/anneKoethke/tracker/blob/master/res/img/showcase_pngs/tracker_1_desktop.png "Desktop version") | Up to three columns with the categories, changes based on width to two or one. States (not yet started, started, fulfilled, terminated) als SVGs for preattentive perception. Highlighting teh title (+ pointer cursor) to empahsis the possibility to click ont a title for further info. |
+Up to three columns with the categories, changes based on width to two or one. States (not yet started, started, fulfilled, terminated) als SVGs for preattentive perception. Highlighting teh title (+ pointer cursor) to empahsis the possibility to click ont a title for further info. 
+![alt text](https://github.com/anneKoethke/tracker/blob/master/res/img/showcase_pngs/tracker_1_desktop.png "Desktop version")
 
 ### Desktop with tooltip
- 
-|![alt text](https://github.com/anneKoethke/tracker/blob/master/res/img/showcase_pngs/tracker_2_desktop_tooltip.png "Desktop version with Tooltip") | The tooltip repeats the title and state (img -> text) and adds further info (two paragraphs and an optional link with link text). |
+The tooltip repeats the title and state (img -> text) and adds further info (two paragraphs and an optional link with link text). 
+![alt text](https://github.com/anneKoethke/tracker/blob/master/res/img/showcase_pngs/tracker_2_desktop_tooltip.png "Desktop version with Tooltip")
 
 ### The mobile version 
 Display always in one column. Mobile tooltips start at the bottom of the title they belong to. Towards the bottom of the html (last category), the tooltip display turns upwards (so nothing is cut off).
