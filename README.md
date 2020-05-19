@@ -6,20 +6,20 @@ JSON data based responsive tracker (mobile, desktop)
 Let's look at some screenshots...
 
 ### The desktop version
-Up to three columns with the categories, changes based on width to two or one. States (not yet started, started, fulfilled, terminated) als SVGs for preattentive perception. Highlighting teh title (+ pointer cursor) to empahsis the possibility to click ont a title for further info. 
-![alt text](https://github.com/anneKoethke/tracker/blob/master/res/img/showcase_pngs/tracker_1_desktop.png "Desktop version")
+ 
+| ![alt text](https://github.com/anneKoethke/tracker/blob/master/res/img/showcase_pngs/tracker_1_desktop.png "Desktop version") | Up to three columns with the categories, changes based on width to two or one. States (not yet started, started, fulfilled, terminated) als SVGs for preattentive perception. Highlighting teh title (+ pointer cursor) to empahsis the possibility to click ont a title for further info. |
 
 ### Desktop with tooltip
-the tooltip repeats the title and state (img -> text) and adds further info (two paragraphs and an optional link) 
-![alt text](https://github.com/anneKoethke/tracker/blob/master/res/img/showcase_pngs/tracker_2_desktop_tooltip.png "Desktop version with Tooltip")
+ 
+|![alt text](https://github.com/anneKoethke/tracker/blob/master/res/img/showcase_pngs/tracker_2_desktop_tooltip.png "Desktop version with Tooltip") | The tooltip repeats the title and state (img -> text) and adds further info (two paragraphs and an optional link with link text). |
 
 ### The mobile version 
-always one column.
+Display always in one column. Mobile tooltips start at the bottom of the title they belong to. Towards the bottom of the html (last category), the tooltip display turns upwards (so nothing is cut off).
 
 | (no interaction) | with tooltip |
 |:-------------:|:-------------:|
 | ![alt text](https://github.com/anneKoethke/tracker/blob/master/res/img/showcase_pngs/tracker_3_mobile.png "Mobile version") | ![alt text](https://github.com/anneKoethke/tracker/blob/master/res/img/showcase_pngs/tracker_4_mobile_tooltip.png "Mobile version with Tooltip") |
 
-Mobile tooltips start at the bottom of the Title they belong to. Towards the bottom of the html (last category), the tooltip display turns upwards (so nothing is cut).
+
 
 
