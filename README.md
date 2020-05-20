@@ -5,14 +5,12 @@ JSON data based responsive tracker (mobile, desktop) with JS, HTML, CSS. Have an
 |:----------------------------:|:-----------|
 | ![alt text](https://github.com/anneKoethke/tracker/blob/master/res/img/showcase_pngs/tracker_5_aufbau.png "topic == category") | underscore is used to fuse the data (template with JSON) to the category (via class). Subcategories (h3) can be added to every single item if needed. There are four states (not yet started, started, fulfilled, terminated) represented by easy readable SVGs for preattentive perception. Each item has a tooltip with furhter information (see bellow). |
 
-&nbsp;
 
 ## The desktop version (tooltip active)
 
 Up to three columns with the categories, changes based on width of the page or container to two or one column. Highlighting the title (+ pointer cursor) to empahsis the possibility to click ont a title for further info. The tooltip repeats the title and state (img -> text) and adds further info (two paragraphs and an optional link with link text). 
 ![alt text](https://github.com/anneKoethke/tracker/blob/master/res/img/showcase_pngs/tracker_2_desktop_tooltip.png "Desktop version with Tooltip")
 
-&nbsp;
 
 ## The mobile version 
 
